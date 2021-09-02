@@ -1,0 +1,12 @@
+.navbar-custom {
+  z-index: 999;
+  padding: 20px 0px;
+  background-color: transparent;
+  border: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.bg-color {
+  background-color: #fff;
+}
