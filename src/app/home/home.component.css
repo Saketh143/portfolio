@@ -56,9 +56,7 @@ a {
   color: #007bff;
 }
 
-.navbar-custom .navigation .nav-item .nav-link:hover, .navbar-custom .navigation .nav-item .nav-link:focus, .navbar-custom .navigation .nav-item .nav-link.active {
-  color: #007bff;
-}
+
 
 .navbar-custom .navigation .dropdown {
   position: relative;
@@ -154,6 +152,32 @@ button:not(:disabled) {
   border: 0;
 }
 
+
+@media (max-width: 768px) {
+  .navbar-custom .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-custom {
+    background-color: #ffffff !important;
+  }
+  .navbar-custom .logo {
+    color: #343a40 !important;
+  }
+  .navbar-custom .navbar-nav .nav-item .nav-link {
+    color: #343a40 ;
+  }
+
+  
+}
+
+@media (max-width: 1023px) {
+  .navbar-custom .nav-social {
+    display: none;
+  }
+}
 
 .hero-area {
   background-size: cover;

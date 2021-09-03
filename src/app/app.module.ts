@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -28,6 +29,12 @@ import { ReferencesComponent } from './references/references.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    RouterModule.forRoot(
+      [
+        {path: '', component: HomeComponent},
+        {path: 'about', component: AboutComponent}
+      ]
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
