@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { ReferencesComponent } from './references/references.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './skills/skills.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WorkExperienceComponent } from './work-experience/work-experience.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { SkillsComponent } from './skills/skills.component';
     HomeComponent,
     ReferencesComponent,
     FooterComponent,
-    SkillsComponent
+    SkillsComponent,
+    WorkExperienceComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { SkillsComponent } from './skills/skills.component';
         {path: '', component: HomeComponent},
         {path: 'about', component: AboutComponent}
       ]
-    )
+    ),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
