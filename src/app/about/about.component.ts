@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+//  declare const Typewriter : any;
+const Typewriter = require('../../../node_modules/t-writer.js/dist/t-writer.js');
+
 
 @Component({
   selector: 'app-about',
@@ -10,6 +13,22 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const target = document.querySelector('.tw');
+    const writer = new Typewriter(target, {
+      loop: true, 
+      typeSpeed: 100 ,
+      typeColor : " #007bff "
+    })
+    
+    writer
+      .strings(
+        400,
+        "Web Developer",
+        "Software Developer", 
+        "ML Enthusiast"
+      )
+      .start()
+
   }
 
 }
