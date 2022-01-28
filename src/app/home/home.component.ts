@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit,HostListener } from '@angular/core';
 
 @Component({
@@ -5,9 +6,10 @@ import { Component, OnInit,HostListener } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
 
-  constructor() { }
+ collapsed = true;
+  constructor(private viewportScroller : ViewportScroller) { }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -18,7 +20,13 @@ export class HomeComponent implements OnInit {
       element.classList.remove('bg-color');
     }
   }
-  ngOnInit(): void {
+  
+  toggleCollapsed(){
+    this.collapsed = !this.collapsed;
+  }
+
+  onClickScroll(elementId: string){
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
 }
