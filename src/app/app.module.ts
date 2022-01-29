@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { ExpertiseComponent } from './expertise/expertise.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
     ReferencesComponent,
     FooterComponent,
     SkillsComponent,
-    WorkExperienceComponent
+    WorkExperienceComponent,
+    ExpertiseComponent
   ],
   imports: [
     BrowserModule,
