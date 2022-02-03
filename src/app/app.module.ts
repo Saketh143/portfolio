@@ -17,6 +17,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { ExpertiseComponent } from './expertise/expertise.component';
 
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +38,8 @@ import { ExpertiseComponent } from './expertise/expertise.component';
   ],
   imports: [
     BrowserModule,
+    MDBBootstrapModule.forRoot(),
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
     RouterModule.forRoot(
@@ -45,6 +51,8 @@ import { ExpertiseComponent } from './expertise/expertise.component';
     FontAwesomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
+
 })
 export class AppModule { }
